@@ -1,0 +1,53 @@
+//------------------------Sort1-------------------------------
+
+5k - 0.001s
+10k - 0.481s
+50k - 19.173s
+
+r5k - 0.061s
+r10k - 0.401s
+r50k - 14.941.s
+
+sort1 uses: Bubble Sort
+
+
+How do you know?:
+
+As the numbers n is very large at 50k, Sort3 method is significantly faster than Sort1, although for 10k numbers at random order Sort1 was faster than Sort 2.
+When the numbers are in reverse order, it became  obvious that Sort3 is faster than Sort1 for 5k,10k and 50k numbers.
+Selection sort is faster when than bubble sort when numbers are reversed because, all the bigger numbers were already at the start. sparing the selection sort method to go through all n^2 times in order to rearrange the biggest number to the last.
+
+
+//-----------------------Sort 2-------------------------------
+5k - 0.001s
+10k - 0.022s
+50k - 4.992s
+
+r5k - 0.019s
+r10k - 0.079s
+r50k - 5.091s
+
+sort2 uses: Merge Sort
+
+
+How do you know?:
+It is the fastest among the three algorithms, regardless of the different txt files of different number n chosen in a random order and regardless whether their order is reversed.
+
+
+
+//-----------------------Sort 3-------------------------------
+5k - 0.036s
+10k - 0.299s
+50k - 8.722s
+
+r5k - 0.040s
+r10k - 0.319s
+r50k - 8.323s
+
+sort3 uses: Selection Sort
+
+
+How do you know?:
+As the numbers n is very large at 50k, Sort3 method is significantly faster than Sort1, although for 10k numbers at random order Sort1 was faster than Sort 2.
+When the numbers are in reverse order, it became  obvious that Sort3 is faster than Sort1 for 5k,10k and 50k numbers.
+Selection sort is faster when than bubble sort when numbers are reversed because, all the bigger numbers were already at the start. sparing the selection sort method to go through all n^2 times in order to rearrange the biggest number to the last.
