@@ -21,7 +21,7 @@ int main(void)
     int score2 = compute_score(word2);
 
     // TODO: Print the winner
-    printf("score1 is %i, score 2 is %i. \n", score1, score2);
+    printf("score 1 is %i, score 2 is %i. \n", score1, score2);
     if (score1 > score2)
     {
         printf("Player 1 wins!\n");
@@ -37,6 +37,7 @@ int main(void)
 
 }
 
+// Compute score function, with the parameter string word
 int compute_score(string word)
 {
 
