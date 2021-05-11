@@ -1,0 +1,46 @@
+#include <cs50.h>
+#include <stdio.h>
+
+int main(void)
+
+{
+//prompt
+int h;
+do
+   {h = get_int("Height? (Enter between 0 and 9): ");
+   }
+   while (h < 1 || h > 8);
+
+//grand loop,
+//for o determines ""\n" aka rows and "o -1" will produce "h-1" counts, and do "2-4" isntead of 1-3 when h= 3.
+// i determines no. of "#" that increases along with "variable" for each single loop count.
+    if (h > 1 || h < 9)
+    {int variable = 0;
+    {for (int o = 0; o < h; o++)
+     {   for (int space = h ; space - 1 >= variable; space--)
+        { if (space != h)
+         {
+         printf(" ");
+         }}
+
+
+        {for (int i = 0; i <= variable; i++)
+        printf("#");
+
+        }
+
+        printf("\n");
+
+      variable++;
+     }
+
+    }}
+
+}
+
+
+
+
+
+
+
