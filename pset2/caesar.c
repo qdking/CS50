@@ -19,16 +19,16 @@
 
 int main (int argc, string argv[]){
 
-//Part 1: Keying numbers to command line
+//Part 1: Prompting the user a number input to the command line after ./caesar
 
     if (argc == 2 )
     {
-        int stringtoints = atoi (argv[1]);
+        int stringtoints = atoi (argv[1]); //atoi converts user's string number input to actual int number
         printf("%i\n", stringtoints);
 
         for (int i = 0, n = strlen(argv[1]); i < n ; i++)
         {
-            if (isdigit(argv[1][i]) == false)
+            if (isdigit(argv[1][i]) == false) //if any character is not a digit, then return back to Part 1 prompt (this).
             {
                 printf("Usage ./caesar key\n");
                 return 1;
@@ -36,29 +36,29 @@ int main (int argc, string argv[]){
         }
         printf("Success!\n");
 
-//Part 2: Ciphering the text
+//Part 2: Get user's text input and ciphering this text
 
-        string plaintext = get_string ("plaintext: \n");
+        string plaintext = get_string ("plaintext: \n"); // Get user's input for the plaintext
         printf("ciphertext: ");
 
-            for (int i = 0, n = strlen(plaintext); i < n ; i ++)
+            for (int i = 0, n = strlen(plaintext); i < n ; i ++) // Go through each char in the plaintext string
             {
-                if (isalpha(plaintext[i]) && islower(plaintext[i]))
+                if (isalpha(plaintext[i]) && islower(plaintext[i])) // If the char is lower case,
                 {
 
-                    char cipherchar = (((plaintext[i] + stringtoints - 97) % 26) + 97);
+                    char cipherchar = (((plaintext[i] + stringtoints - 97) % 26) + 97); // Then create a newly ciphered char by adding the user's desired number input earlier on. Number 97 corresponds to lowercase ACSII
                     printf("%c", cipherchar);
                 }
 
-                else if (isalpha(plaintext[i]) && isupper(plaintext[i]))
+                else if (isalpha(plaintext[i]) && isupper(plaintext[i])) // if the char is upper case,
                 {
-                    char cipherchar = (((plaintext[i] + stringtoints -65 ) % 26) + 65);
+                    char cipherchar = (((plaintext[i] + stringtoints -65 ) % 26) + 65);  // Then create a newly ciphered char by adding the user's desired number input earlier on. Number 97 corresponds to uppercase ACSII
                     printf("%c", cipherchar);
                 }
 
                 else
                 {
-                    printf("%c", plaintext[i]);
+                    printf("%c", plaintext[i]); // Prints all the punctuation marks and whatnot.
                 }
 
             }
@@ -67,7 +67,7 @@ int main (int argc, string argv[]){
 
     }
 
-// Part 1.5: Failure to key in positive integers without any space
+// Part 1.5: Failure to key in positive integers without any spacing
     else
     {
         printf("Usage ./caesar key\n");
